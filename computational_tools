@@ -2,13 +2,38 @@
 1. SAP scores:aggregation propensity
 N. Chennamsetty, V. Voynov, V. Kayser, B. Helk, B.L. Trout Prediction of aggregation prone regions of therapeutic proteins J. Phys. Chem. B, 114 (2010), pp. 6614-6624
 
+#hydrophobicity:Hydrophobicity can relate to aggregation propensity, solubility, viscosity, self-interaction, and
+protein stability, making it useful to predict potential downstream risks. Aggregation of antibody
+therapeutics can lead to precipitation and shortened storage period of drugs before administration,
+while aggregation in vivo can increase the immunogenicity of the drug. To predict the solubility and aggregation propensity of protein, several prediction tools have
+been developed, 
+1.SOLart
 2. CamSol:solubility of sequences 
 P. Sormanni, F.A. Aprile, M. Vendruscolo The CamSol method of rational design of protein mutants with enhanced solubility J. Mol. Biol., 427 (2015), pp. 478-490
+3. ML model, Aggrescan3D
 
-3. Kabat region definition provided by the abYsis webtool version 3.4.1 
+#Immunogenicity
+1. Immune epitope database analysis resource (IEDB-AR) is a comprehensive website that provides several computational tools focused
+on the prediction and analysis of B and T cell epitopes
+2. Biophi: Merke and Bitton's group: Sapiens, transformer enconder-based language model
+3. HuMab: Deane group, train on OAS 2Billion sequences, random forest model
+
+#Pharmacokinetic clearance
+Pharmacokinetic (PK) clearance determines the half-life of an antibody and therefore determines
+how long an antibody drug can remain in the body after administration. Isoelectric point (pI), viscosity, immunogenicity, non-specificity, aggregation, and stability are factors related to clinical PK
+clearance rate
+
+Kabat region definition provided by the abYsis webtool version 3.4.1 
 http://www.abysis.org/abysis/index.html
 Swindells, M. B. et al. abYsis: integrated antibody sequence and structure—management, analysis, and prediction. J. Mol. Biol. 429, 356–364 (2017).
 
 https://opig.stats.ox.ac.uk/webapps/sabdab-sabpred/sabpred/tap
 
 https://www.sdab-db.ca/
+
+#predict overall developability using antibody sequences or structures
+1. http://www.abysis.org/abysis
+2. Predicting Antibody Developability from Sequence using Machine Learning
+
+
+#
