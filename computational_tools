@@ -21,7 +21,7 @@ on the prediction and analysis of B and T cell epitopes
 #Pharmacokinetic clearance
 Pharmacokinetic (PK) clearance determines the half-life of an antibody and therefore determines
 how long an antibody drug can remain in the body after administration. Isoelectric point (pI), viscosity, immunogenicity, non-specificity, aggregation, and stability are factors related to clinical PK
-clearance rate
+clearance rate. the pI is the most essential
 
 Kabat region definition provided by the abYsis webtool version 3.4.1 
 http://www.abysis.org/abysis/index.html
@@ -36,4 +36,31 @@ https://www.sdab-db.ca/
 2. Predicting Antibody Developability from Sequence using Machine Learning
 
 
-#
+#Antibody structure modeling methods
+1.ABodyBuilder
+A. Annotate and number antibody sequence
+B. Select framework template with high homology
+C. Model VH-VL orientation
+D. Model CDR loop templates by ab initio modeling
+E. Model side chains using SCWRL4 software
+
+2.Ablooper
+A. Input geometry for each CDR loop with its residues
+B. Introduce it into graph neural network, named E(n)-Equivariant Graph Neural Networks
+[E(n)-EGNN], to predict the positions of all backbone atoms
+C. Predict CDR loop structures
+
+3.DeepAb
+A. Adopt a recurrent neural network encoder–decoder model, where a bidirectional long
+short-term memory can learn features from sequences, which are evolutionary features
+and structural features.
+B. Predict invariant features which are then used for reconstructing structures with Rosetta
+
+
+4.IgFold
+A. Convert antibody sequences into contextual embeddings using AntiBERTy
+B. Predict atomic coordinates using a series of Transformer layers
+C. Refine the predicted structures using Rosetta
+The IgFold incorporated template structures, leading to more accurate predictions, especially on nanobody structures [45]
+
+#modeling of an antibody/antigen complex structure
